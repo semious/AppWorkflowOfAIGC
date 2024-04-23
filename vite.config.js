@@ -16,12 +16,14 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       less: {
+        modifyVars: {
+        },
         javascriptEnabled: true,
       },
     }
   },
   base:
     process.env.NODE_ENV === "production"
-      ? "http://127.0.0.1:6001/"
+      ? "https://tg.yuanzixx.cn/public/clothingAdmin"
       : "/",
 });

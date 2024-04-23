@@ -8,7 +8,7 @@ import ArcoVue from '@arco-design/web-vue'
 import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 import { Message } from '@arco-design/web-vue';
 import '@arco-design/web-vue/dist/arco.css'
-import '@/assets/style/global.less';
+import '@/assets/css/global.less';
 
 const app = createApp(App)
 Message._context = app._context;

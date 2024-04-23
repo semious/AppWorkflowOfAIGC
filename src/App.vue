@@ -7,12 +7,7 @@ import { onMounted, onBeforeUnmount, nextTick } from "vue";
 export default {
   name: "App",
   setup() {
-    // setTimeout(() => {
-    //   sessionStorage.clear();
-    // }, 60 * 60 * 1000);
-
     onMounted(() => {});
-
     onBeforeUnmount(() => {});
   },
 };

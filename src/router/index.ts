@@ -1,57 +1,54 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
-import Demo from '../views/Template.vue'
-import Clothing from '../views/Clothing.vue'
+import ImageDemo from '../views/image-demo/index.vue'
+import Template from '@/views/Template.vue'
 
 const DEFAULT_LAYOUT = () => import('@/layout/index.vue');
 
-
 const routes: Array<RouteRecordRaw> = [
-  // {
-  //   path: '/',
-  //   name: 'DEMO',
-  //   component: Demo
-  // },
   {
-    path: '/',
-    name: "",
-    redirect: "User",
-    meta: {
-      requiresAuth: true,
-    },
-    component: DEFAULT_LAYOUT,
-    children: [
-      {
-        path: 'demo',
-        name: 'demo',
-        component: () => import('@/views/image-demo/index.vue'),
-        meta: {
-          requiresAuth: false,
-          name: "demo"
-        },
-      },
-    ],
+    path: '/demo',
+    name: 'DEMO',
+    component: ImageDemo,
   },
   {
-    path: '/login',
-    name: 'login',
-    component: () => import('@/views/login/index.vue'),
+    path: '/',
+    name: 'Template',
+    component: Template,
     meta: {
       requiresAuth: false,
+      name: "demo"
     },
-  }, 
+  },
+  // {
+  //   path: '/',
+  //   name: "",
+  //   meta: {
+  //     requiresAuth: false,
+  //   },
+  //   component: DEFAULT_LAYOUT,
+  //   children: [
+  //     {
+  //       path: 'demo',
+  //       name: 'demo',
+  //       component: ImageDemo,
+  //       meta: {
+  //         requiresAuth: false,
+  //         name: "demo"
+  //       },
+  //     },
+  //   ],
+  // },
 ]
 
 const router = createRouter({ history: createWebHashHistory(), routes })
 
 router.beforeEach((to, from, next) => {
-  window.document.title = to.meta.title === undefined ? '后台' : to.meta.title as string
-  // console.log("to",to)
-  if (to.meta.requiresAuth && !isAuthenticated()) { // 如果需要验证登录，并且没有登录，则跳转到登录页
-    next("/login");
-  } else {
-    next();
-  }
+  // window.document.title = to.meta.title === undefined ? '后台' : to.meta.title as string
+  // if (to.meta.requiresAuth && !isAuthenticated()) { // 如果需要验证登录，并且没有登录，则跳转到登录页
+  //   next("/login");
+  // } else {
+  //   next();
+  // }
 });
 
 // 判断用户是否已经登录

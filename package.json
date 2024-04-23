@@ -10,9 +10,7 @@
     "dev": "npm run serve",
     "preview": "vite preview",
     "upload": "ts-node scripts/upload.ts",
-    "build": "vite build && npm run upload",
-    "deploy:prod": "npm run build && npm run upload",
-    "deploy:test": "npm run build && ts-node scripts/upload.ts --path test"
+    "build": "vite build"
   },
   "dependencies": {
     "@arco-design/web-vue": "latest",
