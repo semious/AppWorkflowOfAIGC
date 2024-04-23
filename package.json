@@ -1,0 +1,14 @@
+{
+  "name": "appworkflowofaigc",
+  "version": "1.0.0",
+  "description": "AIGC 的应用工作流工作台",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "semious@163.com",
+  "license": "MIT",
+  "dependencies": {
+    "litegraph.js": "^0.7.18"
+  }
+}

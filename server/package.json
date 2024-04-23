@@ -1,0 +1,50 @@
+{
+  "name": "workflow-api",
+  "version": "1.0.0",
+  "description": "API for workflow",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^5.0.0",
+    "@fastify/cookie": "^9.2.0",
+    "@fastify/cors": "^8.3.0",
+    "@fastify/mysql": "^4.1.0",
+    "@fastify/request-context": "^5.0.0",
+    "@fastify/sensible": "^5.0.0",
+    "@fastify/static": "^6.10.2",
+    "axios": "^1.5.0",
+    "concurrently": "^8.2.1",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.22.0",
+    "fastify-file-upload": "^4.0.0",
+    "fastify-plugin": "^4.0.0",
+    "image-size": "^1.0.2",
+    "jimp": "^0.22.10",
+    "moment": "^2.29.4",
+    "mysql2": "^3.6.3",
+    "nanoid": "3.3.5",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "cross-env": "^7.0.3",
+    "fastify-cli": "^5.8.0",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev nodemon --watch '**/*.ts' --exec 'ts-node' app.ts",
+    "tsc:watch": "tsc -w",
+    "build": "tsc -p tsconfig.json",
+    "dev": "npm run start",
+    "run:prod": "pm2 start dist/app.js --name ai-fortune-api --env production --watch",
+    "run:restart": "pm2 restart ai-fortune-api"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
