@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     // "target": "es6",
-    "module": "esnext",
+    // "module": "esnext",
     // "module": "CommonJS",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
+    // "strict": true,
+    // "jsx": "preserve",
+    // "importHelpers": true,
+    // "moduleResolution": "",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -24,12 +24,10 @@
         "src/*"
       ]
     },
-    "lib": [
-      "es2023",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    // "lib": [
+    //   "es2023",
+    //   "dom",
+    // ]
   },
   "include": [
     "src/**/*.ts",
